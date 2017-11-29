@@ -14,7 +14,7 @@ quantOS是一个量化开源社区,致力于提供量化开源系统的一站式
 
 ## quantOS的业务框架
 
-quantOS推荐的量化交易的业务框架如下图所示：![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/framework.png)主要涉及三个核心的业务组件：数据、策略和交易。
+quantOS推荐的量化交易的业务框架如下图所示：![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/framework.png?raw=true)主要涉及三个核心的业务组件：数据、策略和交易。
 
 quantOS业务框架以策略研究平台JAQS为核心，通过标准化的DataApi和TradeApi，将数据、策略、交易的连接打通，提供了一站式的解决方案。
 
@@ -47,7 +47,7 @@ quantOS业务框架以策略研究平台JAQS为核心，通过标准化的DataAp
 
 以上各种问题，在quantOS上都能得到完美的解决。我们建议的解决方案如下：
 
-![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/solution_case1.png)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/solution_case1.png?raw=true)
 
 1. 使用在线数据源\(data.tushare.org\)，作为自己的数据源，数据质量及时可靠，使用DataApi进行访问，简单易用。
 2. 使用JAQS平台进行策略研究。JAQS集成了信号研究、策略回测、回测分析等功能模块，同时支持Alpha、CTA、套利等，可以快速开发策略，进行回测。
@@ -65,7 +65,7 @@ quantOS业务框架以策略研究平台JAQS为核心，通过标准化的DataAp
 
 quantOS专门为小型投资机构量身定做的解决方案如下：
 
-![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/solution_case2.png)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/solution_case2.png?raw=true)
 
 *  使用DataCore项目，搭建自己的数据系统。DataCore是一款企业级开源量化数据系统，通过标准化接口提供高速实时行情、历史行情和参考数据等核心服务，覆盖股票、商品期货、股指期货、国债期货等品种，适配CTP、万得、聚源、Tushare等各类数据。
 *  使用JAQS进行策略研究。JAQS集成了信号研究、策略回测、回测分析等功能模块，同时支持Alpha、CTA、套利等，可以快速开发策略，进行回测。
@@ -84,7 +84,7 @@ quantOS专门为小型投资机构量身定做的解决方案如下：
 
 quantOS量化交易平台诞生于对冲基金，从一开始就是为中大型机构设计的。我们建议的解决方案如下：
 
-![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/solution_case3.png)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/solution_case3.png?raw=true)
 
 这个解决方案的特点是：
 
