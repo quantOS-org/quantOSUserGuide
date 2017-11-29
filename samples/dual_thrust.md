@@ -1,7 +1,7 @@
 
 ### 商品期货的Dual Thrust日内交易策略
 
-本帖主要介绍了基于事件驱动回测框架实现Dual Thrust日内交易策略。可在[这里](https://github.com/quantOS-org/JAQS/blob/master/example/alpha/DualThrust.py)直接下载策略源代码。
+本帖主要介绍了基于事件驱动回测框架实现Dual Thrust日内交易策略。可在[这里](https://github.com/quantOS-org/JAQS/blob/master/example/eventdriven/DualThrust.py)直接下载策略源代码。
 
 #### 一. 策略介绍
 Dual Thrust是一个趋势跟踪策略，具有简单易用、适用度广的特点，其思路简单、参数较少，配合不同的参数、止盈止损和仓位管理，可以为投资者带来长期稳定的收益，被投资者广泛应用于股票、货币、贵金属、债券、能源及股指期货市场等。
