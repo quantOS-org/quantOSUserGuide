@@ -30,7 +30,7 @@ quantOS是一个量化开源社区，提供量化开源系统的一站式解决�
 
 ## 安装指南
 
-* [1.JAQS安装指南](https://raw.githubusercontent.com/quantOS-org/JAQS/release-0.5.0/doc/install.md)
+* [1.JAQS安装指南](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
 
 ## 常见问题
 
