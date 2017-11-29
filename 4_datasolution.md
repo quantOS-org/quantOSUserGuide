@@ -89,7 +89,7 @@ DataCore是一款企业级开源量化数据系统，通过标准化接口提供
 
 DataCore本地行情系统的逻辑架构如下：
 
-![](/assets/datacore_architect.png)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/datacore_architect.png)
 
 整个行情系统由几个部分构成：
 

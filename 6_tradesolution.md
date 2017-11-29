@@ -46,7 +46,7 @@ TradeApi的详细使用方法,请参看[这里](http://www.quantos.org/tradesim/
 
 vn.py是一个用户众多的开源交易软件，已经实现了与众多交易柜台的对接。quantOS社区将JAQS策略系统与VN.PY进行了集成，实现了统一的交易规范，如下图所示：
 
-![](/assets/trade_api.png)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/trade_api.png)
 
 JAQS用户可以通过统一的TradeApi，访问TradeSim系统进行仿真交易，访问vn.py进行实盘交易。
 
@@ -56,7 +56,7 @@ vn.py通过提供jaqsService，实现了TradeApi的支持。详细信息请参�
 
 TKPro是quantOS的专业交易系统，目前尚未开源。其技术架构如下：
 
-![](/assets/tkpro.png)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/tkpro.png)
 
 JAQS用户可以通过统一的TradeApi，像访问TradeSim一样，访问TKPro。
 

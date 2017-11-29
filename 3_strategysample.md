@@ -166,7 +166,7 @@ ta.initialize(dataview=dv, file_folder=backtest_result_dir_path)
 ta.do_analyze(result_dir=backtest_result_dir_path, selected_sec=list(ta.universe)[:3], brinson_group='sw1')
 ```
 
-通过AlphaAnalyzer对象，可对回测结果进行分析，查看策略回测情况。![](/assets/pnl_img.png)
+通过AlphaAnalyzer对象，可对回测结果进行分析，查看策略回测情况。![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/pnl_img.png)
 
 ### 三、仿真交易
 
@@ -339,7 +339,7 @@ def run_strategy():
 
 ### 四、回测结果及分析
 
-![](/assets/doubleMA.png)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/doubleMA.png)
 
 回测结果还让你满意么？Nani，居然亏钱了？别慌，让我做个分析。策略的分析模块在analyze函数中完成。
 
