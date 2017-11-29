@@ -156,4 +156,4 @@ print "\n\n\nTime lapsed in total: {:.1f}".format(t3)
 
 回测的净值曲线图如下：
 
-![backtestgraham](https://raw.githubusercontent.com/quantOS-org/jaqs/master/doc/img/backtest_Graham_result.png)
+![backtestgraham](https://raw.githubusercontent.com/quantOS-org/jaqs/master/doc/img/backtest_Graham_result.png?raw=true)

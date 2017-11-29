@@ -111,7 +111,7 @@ Upper = self.open_list[-1] + self.k1 * Range
 Lower = self.open_list[-1] - self.k2 * Range
 ```
 几个关键变量的意义如下图所示：
-![illustrationdual](https://raw.githubusercontent.com/quantOS-org/jaqs/master/doc/img/event_drivent_illustration_dual.png)
+![illustrationdual](https://raw.githubusercontent.com/quantOS-org/jaqs/master/doc/img/event_drivent_illustration_dual.png?raw=true)
 
 我们的交易时间段为早上9:01:00到下午14:28:00,交易的逻辑为：
 1. 当分钟Bar的open向上突破上轨时，如果当时持有空单，则先平仓，再开多单；如果没有仓位，则直接开多单；
@@ -151,7 +151,7 @@ def on_trade_ind(self, ind):
 
 #### 四. 回测结果
 回测结果如下图所示：
-![dualthrustresult](https://raw.githubusercontent.com/quantOS-org/jaqs/master/doc/img/event_drivent_dual_thrust_result.png)
+![dualthrustresult](https://raw.githubusercontent.com/quantOS-org/jaqs/master/doc/img/event_drivent_dual_thrust_result.png?raw=true)
 
 
 #### 五、参考文献

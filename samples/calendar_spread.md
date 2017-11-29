@@ -90,4 +90,4 @@ if est.pvalues[1] < 0.05:
 ```
 
 #### 四. 回测结果
-![calendarspreadresult](https://raw.githubusercontent.com/quantOS-org/jaqs/master/doc/img/event_driven_calendar_spread_result.png)
+![calendarspreadresult](https://raw.githubusercontent.com/quantOS-org/jaqs/master/doc/img/event_driven_calendar_spread_result.png?raw=true)
