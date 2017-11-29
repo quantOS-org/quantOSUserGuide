@@ -1,6 +1,6 @@
 # 如何进行算法交易
 
-作者：PKUJohnson
+作者：vanvency, PKUJohnson
 
 算法交易是专业投资者的必备工具，这里为大家介绍如何在TradeSim上进行算法交易。
 
