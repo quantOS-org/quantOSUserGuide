@@ -363,15 +363,15 @@ def analyze():
 
 订单状态如下
 
-![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/tradesim_entrust.png?raw=true)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/tradesim_entrust.PNG?raw=true)
 
 持仓和pnl如下
 
-![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/tradesim_pnl.png?raw=true)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/tradesim_pnl.PNG?raw=true)
 
 成交情况如下
 
-![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/tradesim_trade.png?raw=true)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/tradesim_trade.PNG?raw=true)
 
 
 # 总结
