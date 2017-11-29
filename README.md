@@ -34,6 +34,6 @@ quantOS是一个量化开源社区，提供量化开源系统的一站式解决�
 
 ## 更多策略样例
 
-* [格雷厄姆选股策略](graham.md)
-* [商品期货的Dual Thrust日内交易策略](dual_thrust.md)
-* [Calendar Spread交易策略](calendar_spread.md)
+* [格雷厄姆选股策略](samples/graham.md)
+* [商品期货的Dual Thrust日内交易策略](samples/dual_thrust.md)
+* [Calendar Spread交易策略](samples/calendar_spread.md)
