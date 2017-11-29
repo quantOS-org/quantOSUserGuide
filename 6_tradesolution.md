@@ -46,7 +46,7 @@ TradeApi的详细使用方法,请参看[这里](http://www.quantos.org/tradesim/
 
 vn.py是一个用户众多的开源交易软件，已经实现了与众多交易柜台的对接。quantOS社区将JAQS策略系统与VN.PY进行了集成，实现了统一的交易规范，如下图所示：
 
-![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/trade_api.png)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/trade_api.png?raw=true)
 
 JAQS用户可以通过统一的TradeApi，访问TradeSim系统进行仿真交易，访问vn.py进行实盘交易。
 
@@ -56,29 +56,29 @@ vn.py通过提供jaqsService，实现了TradeApi的支持。详细信息请参�
 
 TKPro是quantOS的专业交易系统，目前尚未开源。其技术架构如下：
 
-![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/tkpro.png)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/tkpro.png?raw=true)
 
 JAQS用户可以通过统一的TradeApi，像访问TradeSim一样，访问TKPro。
 
 TKPro支持的交易功能非常丰富，包括：
 
-* [ ] 用户登录，选择策略号
-* [ ] 查询策略持仓
-* [ ] 查询账户资金
-* [ ] 查询委托、成交
-* [ ] 成交推送，委托状态推送
-* [ ] 普通下单、篮子下单
-* [ ] 算法下单（TWAP、VWAP，配对交易，最优价格算法等）
-* [ ] 撤单
-* [ ] 相对数量下单
-* [ ] 组合目标下单
+* 用户登录，选择策略号
+* 查询策略持仓
+* 查询账户资金
+* 查询委托、成交
+* 成交推送，委托状态推送
+* 普通下单、篮子下单
+* 算法下单（TWAP、VWAP，配对交易，最优价格算法等）
+* 撤单
+* 相对数量下单
+* 组合目标下单
 
 除了下单外，TKPro还提供的功能包括：
 
-* [ ] 多策略管理
-* [ ] 多交易通道支持
-* [ ] 智能交易路由
-* [ ] 极速交易风控
+* 多策略管理
+* 多交易通道支持
+* 智能交易路由
+* 极速交易风控
 
 TKPro是一款适合企业级交易系统，可以本地化部署，有兴趣的同学可以联系[junxiong.fang@qq.com](mailto:junxiong.fang@qq.com)。
 

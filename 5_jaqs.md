@@ -2,7 +2,7 @@
 
 ## JAQS能做什么
 
-![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/procedure.png)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/procedure.png?raw=true)
 
 策略开发的完整流程一般是以下四步的循环往复，JAQS在这四步都提供了支持：
 
@@ -35,7 +35,7 @@ res, msg = data_api.query(view="lb.indexCons",
 
 `DataService`专为JAQS设计，它仍利用`DataApi`的接口进行查询，但对一些常用功能进行了封装，调用起来更加方便。
 
-![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/data_service_api.png)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/data_service_api.png?raw=true)
 
 例如，指数成分查询命令为：
 
@@ -110,17 +110,17 @@ _注：此处我们所讲的信号指Alpha策略研究中的信号_
 
 ### 收益分析报告
 
-![](https://raw.githubusercontent.com/quantOS-org/jaqs/master/doc/img/returns_report.png)
+![](https://raw.githubusercontent.com/quantOS-org/jaqs/master/doc/img/returns_report.png?raw=true)
 
 _注：目前的收益分析方式是根据因子值对股票池内股票分组，后续我们会提供基于截面回归的方式。_
 
 ### 信息系数分析报告
 
-![](https://raw.githubusercontent.com/quantOS-org/jaqs/master/doc/img/ic_report.png)
+![](https://raw.githubusercontent.com/quantOS-org/jaqs/master/doc/img/ic_report.png?raw=true)
 
 ### 事件分析报告
 
-![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/event_report.png)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/event_report.png?raw=true)
 
 ## 策略回测
 
@@ -320,9 +320,9 @@ backtest_instance.save_results(folder_path)
 
 此外，我们还提供了预置的画图函数，画出策略pnl，及在每个标的上的具体买卖情况.
 
-![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/pnl_img2.png)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/pnl_img2.png?raw=true)
 
-![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/plot_trades.png)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/plot_trades.png?raw=true)
 
 ### 报告生成
 
