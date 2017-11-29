@@ -2,7 +2,7 @@
 ### Calendar Spread交易策略
 
 
-本帖主要介绍了基于事件驱动回测框架实现calendar spread交易策略。
+本帖主要介绍了基于事件驱动回测框架实现calendar spread交易策略。可在[这里](https://github.com/quantOS-org/JAQS/blob/master/example/alpha/CalendarSpread.py)直接下载策略源代码。
 
 #### 一. 策略介绍
 在商品期货市场中，同一期货品种不同到期月份合约间的价格在短期内的相关性较稳定。该策略就利用这一特性，在跨期基差稳定上升时进场做多基差，反之做空基差。
