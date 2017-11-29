@@ -54,6 +54,10 @@ quantOS业务框架以策略研究平台JAQS为核心，通过标准化的DataAp
 3. 使用TradeSim进行仿真交易，TradeSim支持股票、期货、期权等品种的交易，根据实时行情进行模拟撮合，最大程度接近实盘效果，提供绩效分析功能，方便用户跟踪策略在模拟盘中的绩效，做到心中有数。
 4. 使用vn.py进行实盘交易，vn.py已经实现了与国内各大主流交易系统的对接，可满足个人用户的单帐户交易要求。JAQS和vn.py之间通过TradeApi进行标准化对接，可做到仿真与实盘交易无缝对接。
 
+**注意**：这个方案只需要安装JAQS即可使用。
+
+JAQS安装文档参见：[https://github.com/quantOS-org/JAQS/blob/master/doc/install.md](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
+
 ### 场景2：适合小型投资机构
 
 与个人投资者不同，小型投资机构进行量化投资，遇到的困难包括：
@@ -71,6 +75,12 @@ quantOS专门为小型投资机构量身定做的解决方案如下：
 *  使用JAQS进行策略研究。JAQS集成了信号研究、策略回测、回测分析等功能模块，同时支持Alpha、CTA、套利等，可以快速开发策略，进行回测。
 *  使用TradeSim进行仿真交易，TradeSim支持股票、期货、期权等品种的交易，根据实时行情进行模拟撮合，最大程度接近实盘效果，提供绩效分析功能，方便用户跟踪策略在模拟盘中的绩效，做到心中有数。
 *  使用vn.py进行实盘交易，vn.py已经实现了与国内各大主流交易系统的对接，可满足小型投资机构少量帐户的交易要求。JAQS和vn.py之间通过TradeApi进行标准化对接，可做到仿真与实盘交易无缝对接。
+
+**注意**：这个方案需要安装DataCore和JAQS。
+
+DataCore安装文档参见：[https://github.com/quantOS-org/DataCore/blob/master/doc/install.md](https://github.com/quantOS-org/DataCore/blob/master/doc/install.md)
+
+JAQS安装文档参见：[https://github.com/quantOS-org/JAQS/blob/master/doc/install.md](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
 
 ### 场景3：适合中大型投资机构
 
@@ -94,7 +104,13 @@ quantOS量化交易平台诞生于对冲基金，从一开始就是为中大型�
 *  使用TradeSim进行仿真交易，TradeSim支持股票、期货、期权等品种的交易，根据实时行情进行模拟撮合，最大程度接近实盘效果，提供绩效分析功能，方便用户跟踪策略在模拟盘中的绩效，做到心中有数。
 *  实盘交易建议使用我们的专业版交易软件TKPro。
 
+**注意**：这个方案需要安装DataCore和JAQS.
 
+DataCore安装文档参见：[https://github.com/quantOS-org/DataCore/blob/master/doc/install.md](https://github.com/quantOS-org/DataCore/blob/master/doc/install.md)
+
+JAQS安装文档参见：[https://github.com/quantOS-org/JAQS/blob/master/doc/install.md](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
+
+**TKPro目前尚未开源**
 
 TKPro支持的交易功能非常丰富，包括：
 
