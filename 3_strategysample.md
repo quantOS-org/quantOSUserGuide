@@ -357,7 +357,22 @@ def analyze():
 
 ### 五、仿真交易展示
 
-待补充
+恭喜你已经完成了上面所有步骤，下面我们就要真刀真枪得干了。所有你所需要做的就是把is_backtest设置为False，然后启动程序，就可以在我们的网站上看到交易结果了。
+
+具体位置在“开源项目-Tradesim-仿真交易”，选择对应的策略，比如在本例中为股指期货。
+
+订单状态如下
+
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/tradesim_entrust.PNG?raw=true)
+
+持仓和pnl如下
+
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/tradesim_pnl.PNG?raw=true)
+
+成交情况如下
+
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/tradesim_trade.PNG?raw=true)
+
 
 # 总结
 
