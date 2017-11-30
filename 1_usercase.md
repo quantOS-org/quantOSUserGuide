@@ -1,43 +1,16 @@
-# quantOS可以做什么?
+# quantOS典型应用场景分析
 
 作者：quantOS.org
 
-quantOS是一个量化开源社区,致力于提供量化开源系统的一站式解决方案.
+不同的用户需求，决定了不同的系统架构，quantOS提供几种典型的组合场景，供用户自行选择。主要包括：
 
-## quantOS有哪些特点
++ 个人投资者
++ 小型投资机构
++ 中大型投资机构
++ 独立数据用户
++ 独立交易用户
 
-*  **完全开源**.所有软件完全开源, 用户可以免费使用.
-*  **免费数据**.提供策略研究必须的、高质量的、可持续的研究数据,
-*  **本地策略**.提供包括Alpha、CTA、套利等策略模板和回测框架，用户可以快速实现策略，本地化部署。
-*  **仿真交易**.提供免费在线仿真交易模拟环境，帮助用户进行策略验证。
-*  **实盘交易**.提供多种成熟的实盘交易解决方案，适用不同的用户。
-
-## quantOS的业务框架
-
-quantOS推荐的量化交易的业务框架如下图所示：![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/framework.png?raw=true)主要涉及三个核心的业务组件：数据、策略和交易。
-
-quantOS业务框架以策略研究平台JAQS为核心，通过标准化的DataApi和TradeApi，将数据、策略、交易的连接打通，提供了一站式的解决方案。
-
-**在数据系统上**，quantOS提供两种选择：
-
-* 通过与tushare深度集成，提供在线数据服务。
-* 开源DataCore数据系统，客户可适配自己的数据源，本地化部署。
-
-**在策略系统上**，JAQS策略系统采用Python开发并完全开源，并提供了规范化的研究流程和常见类型策略的支持，提供回测框架。用户可下载到本地后，实现自己的策略，保障客户的策略安全。
-
-**在交易系统上**，quantOS提供多种选择：
-
-* 提供一个在线仿真服务TradeSim，供用户策略验证的有效性。
-* 实现了与vn.py的深度集成，可通过vn.py进行实盘交易。
-* 使用企业版的交易软件TKPro进行实盘交易。
-
-## 
-
-## quantOS的应用场景分析
-
-不同的用户需求，决定了不同的系统架构，quantOS提供几种典型的组合场景，供用户自行选择。
-
-### 场景1：适合个人投资者
+## 场景1：适合个人投资者
 
 个人投资者进行量化投资，一般会面临几个具体的困难：
 
@@ -58,7 +31,7 @@ quantOS业务框架以策略研究平台JAQS为核心，通过标准化的DataAp
 
 JAQS安装文档参见：[https://github.com/quantOS-org/JAQS/blob/master/doc/install.md](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
 
-### 场景2：适合小型投资机构
+## 场景2：适合小型投资机构
 
 与个人投资者不同，小型投资机构进行量化投资，遇到的困难包括：
 
@@ -82,7 +55,7 @@ DataCore安装文档参见：[https://github.com/quantOS-org/DataCore/blob/maste
 
 JAQS安装文档参见：[https://github.com/quantOS-org/JAQS/blob/master/doc/install.md](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
 
-### 场景3：适合中大型投资机构
+## 场景3：适合中大型投资机构
 
 中大型机构的业务要求较高，主要包括：
 
@@ -133,4 +106,29 @@ TKPro支持的交易功能非常丰富，包括：
 *  极速交易风控
 
 TKPro是一款适合中大型交易机构的企业级交易系统，可以本地化部署，有兴趣的同学可以联系[junxiong.fang@qq.com](mailto:junxiong.fang@qq.com)。
+
+## 场景4：独立数据用户
+
+独立数据客户希望通过获取数据后，进行数据分析。我们建议的方案如下：
+
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/solution_case4.png?raw=true)
+
+1. 使用在线数据源\(data.tushare.org\)，作为自己的数据源，数据质量及时可靠，使用DataApi进行访问，简单易用。
+2. 使用JAQS平台进行数据分析系统。JAQS提供的DataView组件，可方便快捷的取到用户需要的数据，支持通过公式定义衍生数据，支持本地化存储。
+3. 用户获得数据后，根据自己的业务生成报表和分析结果。
+
+**注意**：这个方案只需要安装JAQS即可使用。
+
+JAQS安装文档参见：[https://github.com/quantOS-org/JAQS/blob/master/doc/install.md](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
+
+## 场景5：独立交易用户
+
+独立交易客户希望能直接进行交易，我们建议的方案如下：
+
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/solution_case5.png?raw=true)
+
+*  安装TradeApi，通过统一的TradeApi可以对接仿真交易和实盘交易
+*  使用TradeSim进行仿真交易，TradeSim支持股票、期货、期权等品种的交易，根据实时行情进行模拟撮合，最大程度接近实盘效果，提供绩效分析功能，方便用户跟踪策略在模拟盘中的绩效，做到心中有数。
+*  使用vn.py进行实盘交易，vn.py已经实现了与国内各大主流交易系统的对接，可满足小型投资机构少量帐户的交易要求。TradeApi可以无缝对接vnpy。
+*  使用我们的专业版交易软件TKPro，这个一般适合中大型投资机构。
 
