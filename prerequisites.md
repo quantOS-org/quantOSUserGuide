@@ -14,6 +14,9 @@
 
 用户注册成功后，系统会为每个用户签发一个令牌，用于DataApi和TradeApi的登录。
 
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/token.png?raw=true)
+
+
 **用户可使用令牌登录访问在线数据系统**
 ```python
 api = DataApi(addr="tcp://data.tushare.org:8910") 
