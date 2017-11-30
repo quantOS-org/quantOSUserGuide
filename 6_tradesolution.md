@@ -20,8 +20,8 @@
 from tradeapi import TradeApi
 
 # 登录仿真系统
-tapi = TradeApi(addr="tcp://gw.quantos.org:8901") # tcp://gw.quantos.org:8901是仿真系统地址
-user_info, msg = tapi.login("demo", "666666")     # 示例账户，用户需要改为自己注册的账户
+tapi = TradeApi(addr="tcp://gw.quantos.org:8901") 
+user_info, msg = tapi.login("demo", "token")     
 
 # 选择策略号
 tapi.use_strategy(123) # 123为给你分配的策略号，可以从user_info中获得
