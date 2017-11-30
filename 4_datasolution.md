@@ -36,7 +36,7 @@ from data_api import DataApi
 
 api = DataApi(addr="tcp://data.tushare.org:8910") # 在线数据源
 
-api.login("username", "password")  #认证模块，需要修改成www.quantos.org的注册用户
+api.login("username", "token")  #认证模块，需要修改成www.quantos.org的注册用户
 
 symbol = 'T1712.CFE, TF1712.CFE, rb1712.SHF'
 fields = 'open,high,low,last,volume'
