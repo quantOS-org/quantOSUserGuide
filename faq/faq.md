@@ -1,15 +1,25 @@
 ﻿# 常见问题
 
 1. 实盘支持哪些券商、通道？
+
 	答：quantOS系统使用vn.py进行实盘交易。vn.py已经实现了与国内各大主流交易系统的对接，可满足个人用户的单帐户交易要求。JAQS和vn.py之间通过TradeApi进行标准化对接，可做到仿真与实盘交易无缝对接。具体列表请见vnpy的gitbuh页面https://github.com/vnpy/vnpy。
+
 2. quantOS的软件在哪里下载？
+
 	答：可以从github下载，地址为https://github.com/quantOS-org。
+
 3. username怎么填？DataApi和TradeApi中的用户名密码和登录网站的用户名密码是什么关系？
+
 	答：两套用户名和密码相同。原来使用用户名和密码登录DataApi和TradeApi，改成使用token登录。
+
 4. python-snappy的安装，为什么用pip就会报错？
+
 	答：请见官网JAQS安装指南 https://www.quantos.org/jaqs/doc.html
+
 5. 能否支持使用TA-lib？
+
 	答：支持。
+
 6. 若在国外没有中国手机如何注册？
 	答：现在只支持中国大陆手机号注册。
 7. 哪里可以找到策略模型的示例？
