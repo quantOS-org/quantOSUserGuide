@@ -139,7 +139,7 @@ from data_api import DataApi
 
 api = DataApi(addr="tcp://127.0.0.1:8910") # 根据本地实际情况修改
 
-# api.login("username", "password")  #认证模块，需要用户修改代码
+# api.login("username", "token")  
 
 symbol = 'T1712.CFE, TF1712.CFE, rb1712.SHF'
 fields = 'open,high,low,last,volume'

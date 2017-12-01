@@ -46,7 +46,7 @@ from jaqs.data import DataView
 data_config= {
   "remote.data.address": "tcp://data.tushare.org:8910",
   "remote.data.username": "Your Username",
-  "remote.data.password": "Your Password"
+  "remote.data.password": "token"
 }
 
 BENCHMARK = '399997.SZ'
@@ -102,7 +102,7 @@ dv.load_dataview(folder_path=dataview_dir_path)
 data_config = {
   "remote.data.address": "tcp://data.tushare.org:8910",
   "remote.data.username": "Your Username",
-  "remote.data.password": "Your Password"
+  "remote.data.password": "token"
 }
 props = {
     "benchmark": BENCHMARK,
@@ -310,7 +310,7 @@ elif self.fast_ma < self.slow_ma:
 trade_config = {
   "remote.trade.address": "tcp://gw.quantos.org:8901",
   "remote.trade.username": "Your Username",
-  "remote.trade.password": "Your Password"
+  "remote.trade.password": "token"
 }
 
 def run_strategy():
