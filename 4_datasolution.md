@@ -61,13 +61,11 @@ df, msg = api.daily(
 
 # 获取证券信息
 df, msg = api.query(
-                view="lb.instrumentInfo",
+                view="jz.instrumentInfo",
                 fields="status,list_date, fullname_en, market",
                 filter="inst_type=&status=1&symbol=",
                 data_format='pandas')
 ```
-
-**在线数据服务有一个限制，不提供行情订阅推送功能，只能查询。**
 
 最全的功能文档，请参考：[http://tushare.org/pro/index.html](http://tushare.org/pro/index.html)
 
