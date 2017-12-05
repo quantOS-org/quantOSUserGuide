@@ -44,7 +44,7 @@ TradeApi的详细使用方法,请参看[这里](http://www.quantos.org/tradesim/
 
 ### 实盘方案1：使用vn.py交易
 
-vn.py是一个用户众多的开源交易软件，已经实现了与众多交易柜台的对接。quantOS社区将JAQS策略系统与VN.PY进行了集成，实现了统一的交易规范，如下图所示：
+vn.py是一个用户众多的开源交易软件，已经实现了与众多交易柜台的对接。quantOS将JAQS策略系统与VN.PY进行了集成，实现了统一的交易规范，如下图所示：
 
 ![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/trade_api.png?raw=true)
 
