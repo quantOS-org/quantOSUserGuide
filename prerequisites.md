@@ -20,13 +20,13 @@
 **用户可使用令牌登录访问在线数据系统**
 ```python
 api = DataApi(addr="tcp://data.tushare.org:8910") 
-api.login("username", "token")  
+api.login("手机号", "token")  
 ```
 
 **用户可使用令牌登录访问仿真交易系统**
 ```python
 tapi = TradeApi(addr="tcp://gw.quantos.org:8901") 
-user_info, msg = tapi.login("username", "token")     
+user_info, msg = tapi.login("手机号", "token")     
 ```
 
 **用户可登录网站后，主动更新令牌**

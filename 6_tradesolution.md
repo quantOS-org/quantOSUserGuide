@@ -80,7 +80,7 @@ TKPro支持的交易功能非常丰富，包括：
 * 智能交易路由
 * 极速交易风控
 
-TKPro是一款适合企业级交易系统，可以本地化部署，有兴趣的同学可以联系[junxiong.fang@qq.com](mailto:junxiong.fang@qq.com)。
+TKPro是一款适合企业级交易系统，可以本地化部署，有兴趣的同学可以联系[tkpro@quantos.org](mailto:tkpro@quantos.org)。
 
 TradeSim相当于TKPro的在线版本，提供了模拟撮合功能。
 

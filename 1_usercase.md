@@ -105,7 +105,7 @@ TKPro支持的交易功能非常丰富，包括：
 *  智能交易路由
 *  极速交易风控
 
-TKPro是一款适合中大型交易机构的企业级交易系统，可以本地化部署，有兴趣的同学可以联系[junxiong.fang@qq.com](mailto:junxiong.fang@qq.com)。
+TKPro是一款适合中大型交易机构的企业级交易系统，可以本地化部署，有兴趣的同学可以联系[tkpro@quantos.org](mailto:tkpro@quantos.org)。
 
 ## 场景4：独立数据用户
 

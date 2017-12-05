@@ -20,7 +20,7 @@ from DataApi import DataApi
 
 api = DataApi(addr="tcp://data.tushare.org:8910")
 
-api.login("username", "token") 
+api.login("手机号", "token") 
 
 df, msg = api.daily(
                 symbol="600832.SH, 600030.SH", 

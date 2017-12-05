@@ -8,7 +8,7 @@
 
 	答：可以从github下载，地址为https://github.com/quantOS-org。
 
-3. username怎么填？DataApi和TradeApi中的用户名密码和登录网站的用户名密码是什么关系？
+3. DataApi和TradeApi中的用户名密码和登录网站的用户名密码是什么关系？
 
 	答：两套用户名和密码相同。原来使用用户名和密码登录DataApi和TradeApi，改成使用token登录。
 

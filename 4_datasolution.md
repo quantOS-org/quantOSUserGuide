@@ -36,7 +36,7 @@ from data_api import DataApi
 
 api = DataApi(addr="tcp://data.tushare.org:8910") # 在线数据源
 
-api.login("username", "token")  #认证模块，需要修改成www.quantos.org的注册用户
+api.login("手机号", "token")  #认证模块，需要修改成www.quantos.org的注册用户
 
 symbol = 'T1712.CFE, TF1712.CFE, rb1712.SHF'
 fields = 'open,high,low,last,volume'
@@ -63,9 +63,11 @@ df, msg = api.daily(
 df, msg = api.query(
                 view="jz.instrumentInfo",
                 fields="status,list_date, fullname_en, market",
-                filter="inst_type=&status=1&symbol=",
+                filter="inst_type=1",
                 data_format='pandas')
 ```
+
+**在线数据服务有一个限制，不提供行情订阅推送功能，只能查询。**
 
 最全的功能文档，请参考：[http://tushare.org/pro/index.html](http://tushare.org/pro/index.html)
 
@@ -137,7 +139,7 @@ from data_api import DataApi
 
 api = DataApi(addr="tcp://127.0.0.1:8910") # 根据本地实际情况修改
 
-# api.login("username", "token")  
+# api.login("手机号", "token")  
 
 symbol = 'T1712.CFE, TF1712.CFE, rb1712.SHF'
 fields = 'open,high,low,last,volume'

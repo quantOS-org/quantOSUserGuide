@@ -2,7 +2,7 @@
 
 作者：quantOS.org
 
-quantOS是一个量化开源社区,致力于提供量化开源系统的一站式解决方案.
+quantOS致力于提供量化开源系统的一站式解决方案.
 
 ## quantOS有哪些特点
 
@@ -16,11 +16,11 @@ quantOS是一个量化开源社区,致力于提供量化开源系统的一站式
 
 quantOS推荐的量化交易的业务框架如下图所示：![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/framework.png?raw=true)主要涉及三个核心的业务组件：数据、策略和交易。
 
-quantOS业务框架以策略研究平台JAQS为核心，通过标准化的DataApi和TradeApi，将数据、策略、交易的连接打通，提供了一站式的解决方案。
+quantOS业务框架以策略研究平台JAQS为核心，通过标准化的数据Api(DataApi)和交易Api(TradeApi)，将数据、策略、交易的连接打通，提供了一站式的解决方案。
 
 **在数据系统上**，quantOS提供两种选择：
 
-* 通过与tushare深度集成，提供在线数据服务。
+* 通过与tushare深度集成，提供在线数据服务(data.tushare.org)。
 * 开源DataCore数据系统，客户可适配自己的数据源，本地化部署。
 
 **在策略系统上**，JAQS策略系统采用Python开发并完全开源，并提供了规范化的研究流程和常见类型策略的支持，提供回测框架。用户可下载到本地后，实现自己的策略，保障客户的策略安全。
