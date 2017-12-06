@@ -6,9 +6,9 @@
 
 使用非常简单，步骤如下:
 
-1. 成为www.quantos.org的注册用户，注册地址是：[https://www.quantos.org/cas/register.html](https://www.quantos.org/cas/register.html)
+1. 注册成为www.quantos.org的注册用户，注册地址是：[https://www.quantos.org/cas/register.html](https://www.quantos.org/cas/register.html)
 
-2. 下载完整的DataApi。[https://github.com/quantOS-org/DataAPI](https://github.com/quantOS-org/DataAPI)
+2. 安装JAQS，请参考[https://github.com/quantOS-org/JAQS/blob/master/doc/install.md](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
 
 3. 使用DataApi，从TusharePro获取您需要的研究数据。
 
@@ -16,7 +16,7 @@
 
 ```python
 
-from DataApi import DataApi
+from jaqs.data import DataApi
 
 api = DataApi(addr="tcp://data.tushare.org:8910")
 

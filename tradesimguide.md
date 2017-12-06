@@ -11,13 +11,11 @@
 
 ## 注册
 
-+ 注册成为quantOS的用户，即成为TradeSim系统的用户。
-+ 注册地址是：[http://www.quantos.org/cas/register.html](http://www.quantos.org/cas/register.html)
++ 注册成为quantOS的用户，即成为TradeSim系统的用户。注册地址是：[http://www.quantos.org/cas/register.html](http://www.quantos.org/cas/register.html)
 + 每个用户初始提供三个交易策略，分别交易沪深300，中证500和股指期货。
++ 安装JAQS，请参考[https://github.com/quantOS-org/JAQS/blob/master/doc/install.md](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
 
 ## API程序化交易
-
-+ 下载TradeApi。下载地址是：[https://github.com/quantOS-org/TradeApi](https://github.com/quantOS-org/TradeApi)
 
 + 使用TradeApi进行程序化交易。样例代码如下：
 
