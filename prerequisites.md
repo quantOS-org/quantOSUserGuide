@@ -1,4 +1,4 @@
-# quantOS必备&用户登录指南
+# quantOS用户登录指南
 
 作者：PKUJohnson
 
@@ -19,12 +19,14 @@
 
 **用户可使用令牌登录访问在线数据系统**
 ```python
+from jaqs.data import DataApi
 api = DataApi(addr="tcp://data.tushare.org:8910") 
 api.login("手机号", "token")  
 ```
 
 **用户可使用令牌登录访问仿真交易系统**
 ```python
+from jaqs.trade import TradeApi
 tapi = TradeApi(addr="tcp://gw.quantos.org:8901") 
 user_info, msg = tapi.login("手机号", "token")     
 ```
