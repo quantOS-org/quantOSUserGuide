@@ -20,22 +20,21 @@ quantOS致力于提供量化开源系统的一站式解决方案。
 
 * [quantOS用户登录指南](prerequisites.md)
 * [quantOS可以做什么](architect.md)
-* [1.quantOS典型应用场景分析](1_usercase.md)
-* [2.quantOS数据规范](2_dataspecification.md)
-* [3.两个量化交易策略样例](3_strategysample.md)
+* [策略系统JAQS简介](jaqs_introduction.md)
+* [JAQS安装指南](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
+
+* [两个量化交易策略样例](strategysample.md)
+* [如何进行仿真交易](tradesimguide.md)
+* [我只想使用数据，该怎么做](tusharepro.md)
 
 ## 高级进阶
-
-* [4.数据系统解决方案](4_datasolution.md)
-* [5.策略系统JAQS](5_jaqs.md)
-* [6.交易系统解决方案](6_tradesolution.md)
-
-## 实战技巧
-
-* [7.如何进行算法交易](7_algorithm.md)
-* [8.如何进行仿真交易](8_tradesimguide.md)
-* [9.我只想使用数据，该怎么做](9_tusharepro.md)
-* [10.数据处理神器DataView](https://github.com/quantOS-org/JAQS/blob/master/doc/data_view.md)
+* [quantOS典型应用场景分析](usercase.md)
+* [数据系统解决方案](datasolution.md)
+* [策略系统JAQS解析](jaqs.md)
+* [交易系统解决方案](tradesolution.md)
+* [如何进行算法交易](algorithm.md)
+* [数据处理神器DataView](https://github.com/quantOS-org/JAQS/blob/master/doc/data_view.md)
+* [quantOS数据规范](dataspecification.md)
 
 ## 安装指南
 
