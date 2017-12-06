@@ -18,7 +18,7 @@ quantOS致力于提供量化开源系统的一站式解决方案。
 
 ## 快速入门
 
-* [quantOS必备&用户登录指南](prerequisites.md)
+* [quantOS用户登录指南](prerequisites.md)
 * [0.quantOS可以做什么](0_architect.md)
 * [1.quantOS典型应用场景分析](1_usercase.md)
 * [2.quantOS数据规范](2_dataspecification.md)
