@@ -24,8 +24,8 @@ api.login("手机号", "token")
 
 df, msg = api.daily(
                 symbol="600832.SH, 600030.SH", 
-                start_date="2012-10-26",
-                end_date="2012-11-30", 
+                start_date=20121026,
+                end_date=20121130, 
                 fields="", 
                 adjust_mode="post")
 ```
@@ -40,5 +40,6 @@ df, msg = api.daily(
 |5.11|  600832| 5.14|   5.09|   NaN |5.12   |NaN    |600832.SH| 20121031    |交易 |1.072007e+07|  2097770 | 5.11|
 |5.18|  600832| 5.20|   5.12|   NaN |5.12   |NaN    |600832.SH| 20121101    |交易 |1.972100e+07|  3814712 | 5.17|
 
-详细接口API，请参看：[http://tushare.org/pro/usage.html](http://tushare.org/pro/usage.html)
-
+详细接口API，请参看：
+1. [http://tushare.org/pro/usage.html](http://tushare.org/pro/usage.html)
+2. [https://github.com/quantOS-org/JAQS/blob/master/doc/data_api.md](https://github.com/quantOS-org/JAQS/blob/master/doc/data_api.md)

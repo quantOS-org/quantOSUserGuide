@@ -37,7 +37,7 @@ print "msg:", msg
 print "task_id:", task_id
 ```
 
-+ TradeApi的详细使用方法,请参看[这里](http://www.quantos.org/tradesim/doc.html).
++ TradeApi的详细使用方法,请参看[这里](https://github.com/quantOS-org/JAQS/blob/master/doc/trade_api.md).
 
 ## Web综合客户端
 
