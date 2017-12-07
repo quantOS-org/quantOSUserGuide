@@ -1,12 +1,16 @@
+
+
 # quantOS可以做什么?
+
 
 作者：quantOS.org
 
 quantOS致力于提供量化开源系统的一站式解决方案.
-
 ## quantOS有哪些特点
 
-*  **完全开源**.所有软件完全开源, 用户可以免费使用.
+
+*  **完全开源**.所有软件完全开源, 用户可以免费使用.涉及三个核心的业务组件：数据、策略和交易。
+
 *  **免费数据**.提供策略研究必须的、高质量的、可持续的研究数据,
 *  **本地策略**.提供包括Alpha、CTA、套利等策略模板和回测框架，用户可以快速实现策略，本地化部署。
 *  **仿真交易**.提供免费在线仿真交易模拟环境，帮助用户进行策略验证。
@@ -14,9 +18,13 @@ quantOS致力于提供量化开源系统的一站式解决方案.
 
 ## quantOS的业务框架
 
-quantOS推荐的量化交易的业务框架如下图所示：![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/framework.png?raw=true)主要涉及三个核心的业务组件：数据、策略和交易。
+quantOS推荐的量化交易的业务框架如下图所示：
+
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/framework.png?raw=true)
 
 quantOS业务框架以策略研究平台JAQS为核心，通过标准化的数据Api(DataApi)和交易Api(TradeApi)，将数据、策略、交易的连接打通，提供了一站式的解决方案。
+
+涉及三个核心的业务组件：数据、策略和交易。
 
 **在数据系统上**，quantOS提供两种选择：
 

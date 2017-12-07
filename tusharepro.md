@@ -6,9 +6,9 @@
 
 使用非常简单，步骤如下:
 
-1. 成为www.quantos.org的注册用户，注册地址是：[https://www.quantos.org/cas/register.html](https://www.quantos.org/cas/register.html)
+1. 注册成为www.quantos.org的注册用户，注册地址是：[https://www.quantos.org/cas/register.html](https://www.quantos.org/cas/register.html)
 
-2. 下载完整的DataApi。[https://github.com/quantOS-org/DataAPI](https://github.com/quantOS-org/DataAPI)
+2. 安装JAQS，请参考[https://github.com/quantOS-org/JAQS/blob/master/doc/install.md](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
 
 3. 使用DataApi，从TusharePro获取您需要的研究数据。
 
@@ -16,7 +16,7 @@
 
 ```python
 
-from DataApi import DataApi
+from jaqs.data import DataApi
 
 api = DataApi(addr="tcp://data.tushare.org:8910")
 
@@ -24,8 +24,8 @@ api.login("手机号", "token")
 
 df, msg = api.daily(
                 symbol="600832.SH, 600030.SH", 
-                start_date="2012-10-26",
-                end_date="2012-11-30", 
+                start_date=20121026,
+                end_date=20121130, 
                 fields="", 
                 adjust_mode="post")
 ```
@@ -40,5 +40,6 @@ df, msg = api.daily(
 |5.11|  600832| 5.14|   5.09|   NaN |5.12   |NaN    |600832.SH| 20121031    |交易 |1.072007e+07|  2097770 | 5.11|
 |5.18|  600832| 5.20|   5.12|   NaN |5.12   |NaN    |600832.SH| 20121101    |交易 |1.972100e+07|  3814712 | 5.17|
 
-详细接口API，请参看：[http://tushare.org/pro/usage.html](http://tushare.org/pro/usage.html)
-
+详细接口API，请参看：
+1. [http://tushare.org/pro/usage.html](http://tushare.org/pro/usage.html)
+2. [https://github.com/quantOS-org/JAQS/blob/master/doc/data_api.md](https://github.com/quantOS-org/JAQS/blob/master/doc/data_api.md)
