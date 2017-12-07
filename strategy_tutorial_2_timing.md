@@ -1,7 +1,10 @@
-﻿# quantOS量化策略样例(2): 择时
+# quantOS量化策略样例(2): 择时
 
----
-本文将向大家展示如何利用quantOS系统的事件驱动框架开发择时策略，这里我将以贵州茅台（600519.SH）的双均线穿越策略为例。完整代码请点击[这里](https://github.com/quantOS-org/JAQS/tree/master/example/eventdriven)。
+本文将向大家展示如何利用JAQS系统的事件驱动框架开发择时策略，并通过TradeSim进行仿真交易。这里我将以贵州茅台（600519.SH）的双均线穿越策略为例。
+
+JAQS安装教程，参见 [JAQS安装指南](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
+
+**完整代码**请点击[这里](https://github.com/quantOS-org/JAQS/tree/master/example/eventdriven)。
 
 ## 一、策略描述
 双均线穿越策略分为两步：
@@ -135,7 +138,7 @@ def on_trade(self, ind):
     print(ind)
     self.pos = self.ctx.pm.get_pos(self.symbol)
 ```
-##三、回测启动
+## 三、回测启动
 策略启动在`run_strategy()`函数中完成。
 ```python
 def run_strategy():
@@ -165,9 +168,10 @@ def run_strategy():
         tapi = RealTimeTradeApi(trade_config)
         ins = EventLiveTradeInstance()
 ```
-##四、回测结果及分析
+## 四、回测结果及分析
 回测结果如下图所示：
-[](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/doubleMA.PNG?raw=true)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/doubleMA.png?raw=true)
+
 回测结果的分析在`analyze()`中完成
 ```python
 def analyze():
@@ -180,7 +184,7 @@ def analyze():
     
     ta.do_analyze(result_dir=result_dir_path, selected_sec=[])
 ```
-* 注：本文只介绍了策略核心函数和逻辑，完整代码请点击[这里](https://github.com/quantOS-org/JAQS/tree/master/example/eventdriven)。
+*__注__：本文只介绍了策略核心函数和逻辑，完整代码请点击[这里](https://github.com/quantOS-org/JAQS/blob/master/example/eventdriven/DoubleMA.py)。*
 
 ## 五、仿真交易结果展示
-具体位置在“开源项目-Tradesim-仿真交易”，选择对应的策略，比如在本例中为沪深300。
+在[仿真交易网站](https://www.quantos.org/tradesim/trade.html)，选择对应的策略，比如在本例中为沪深300。
