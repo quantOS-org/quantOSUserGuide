@@ -167,7 +167,8 @@ def run_strategy():
 ```
 ## 四、回测结果及分析
 回测结果如下图所示：
-![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/doubleMA.PNG?raw=true)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/doubleMA.png?raw=true)
+
 回测结果的分析在`analyze()`中完成
 ```python
 def analyze():
