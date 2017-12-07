@@ -1,6 +1,8 @@
 # quantOS量化策略样例(2): 择时
 
-本文将向大家展示如何利用quantOS系统的事件驱动框架开发择时策略，这里我将以贵州茅台（600519.SH）的双均线穿越策略为例。
+本文将向大家展示如何利用JAQS系统的事件驱动框架开发择时策略，并通过TradeSim进行仿真交易。这里我将以贵州茅台（600519.SH）的双均线穿越策略为例。
+
+JAQS安装教程，参见 [JAQS安装指南](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
 
 **完整代码**请点击[这里](https://github.com/quantOS-org/JAQS/tree/master/example/eventdriven)。
 
