@@ -20,9 +20,8 @@ quantOS致力于提供量化开源系统的一站式解决方案。
 
 * [quantOS用户登录指南](prerequisites.md)
 * [quantOS可以做什么](architect.md)
-* [策略系统JAQS简介](jaqs_introduction.md)
-* [JAQS安装指南](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
-* [两个量化交易策略样例](strategysample.md)
+* [quantOS量化策略样例(1)：选股](strategy_tutorial_1_alpha)
+* [quantOS量化策略样例(2)：择时](strategy_tutorial_2_alpha)
 * [如何进行仿真交易](tradesimguide.md)
 * [我只想使用数据，该怎么做](tusharepro.md)
 
