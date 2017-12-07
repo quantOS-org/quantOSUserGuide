@@ -2,8 +2,8 @@
 
 本文主要内容：
 
-- 用**JAQS的股票Alpha框架**做股票策略回测.
-- 用**TradeSim**在线仿真交易.
+- 用**JAQS的股票Alpha框架**做股票策略回测（安装教程，参见 [JAQS安装指南](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)）；
+- 用**TradeSim**在线仿真交易。
 
 代码量：<100行；预计阅读时间：5分钟。完整代码及样例见[这里](https://github.com/quantOS-org/JAQS/blob/master/example/alpha/first_example.py).
 
