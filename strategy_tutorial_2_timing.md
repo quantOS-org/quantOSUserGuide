@@ -1,4 +1,4 @@
-﻿# quantOS量化策略样例(2): 择时
+# quantOS量化策略样例(2): 择时
 
 ---
 本文将向大家展示如何利用quantOS系统的事件驱动框架开发择时策略，这里我将以贵州茅台（600519.SH）的双均线穿越策略为例。完整代码请点击[这里](https://github.com/quantOS-org/JAQS/tree/master/example/eventdriven)。
@@ -135,7 +135,7 @@ def on_trade(self, ind):
     print(ind)
     self.pos = self.ctx.pm.get_pos(self.symbol)
 ```
-##三、回测启动
+## 三、回测启动
 策略启动在`run_strategy()`函数中完成。
 ```python
 def run_strategy():
@@ -165,9 +165,9 @@ def run_strategy():
         tapi = RealTimeTradeApi(trade_config)
         ins = EventLiveTradeInstance()
 ```
-##四、回测结果及分析
+## 四、回测结果及分析
 回测结果如下图所示：
-[](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/doubleMA.PNG?raw=true)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/doubleMA.PNG?raw=true)
 回测结果的分析在`analyze()`中完成
 ```python
 def analyze():
