@@ -4,7 +4,7 @@
 
 JAQS安装教程，参见 [JAQS安装指南](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
 
-**完整代码**请点击[这里](https://github.com/quantOS-org/JAQS/tree/master/example/eventdriven)。
+**完整代码**请点击[这里](https://github.com/quantOS-org/JAQS/tree/master/example/eventdriven)，安装JAQS后即可直接运行（安装教程，参见[JAQS安装指南](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)）。
 
 ## 一、策略描述
 双均线穿越策略分为两步：
