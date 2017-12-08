@@ -67,3 +67,6 @@
 17. 外盘交易支持吗？
 
 	答：具体列表请见vnpy的gitbuh页面https://github.com/vnpy/vnpy。
+18. 如何安装`python-snappy`包？
+
+	 见[如何安装python-snappy包](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md#如何安装python-snappy包)
