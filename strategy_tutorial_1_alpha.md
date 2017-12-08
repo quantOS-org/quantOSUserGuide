@@ -193,15 +193,22 @@ bt.run_alpha()
 以上代码中，我们将`AlphaBacktestInstance`更换为`AlphaLiveTradeInstance`，将`AlphaTradeApi`更换为`RealTimeTradeApi`，并使用`RemoteDataService`以获取最新数据。注意`livetrade_props`中需要填写`strategy_no`项，这是我们的策略号，不同用户不同。
 
 运行`run_alpha`后，策略会根据最新数据产生目标投资组合，可从`strategy.goal_positions`中取出并发单：
-
 ```python
 goal_positions = strategy.goal_positions
 task_id, msg = trade_api.basket_order(goal_positions)
 ```
+发单成功后，`trade_api`为该任务的编号，msg为返回信息。
 
-发单成功后，`trade_api`为该任务的编号，msg为返回信息。具体订单、持仓、盈亏等可在[仿真交易网站](https://www.quantos.org/tradesim/trade.html)查看。
+具体订单、持仓、盈亏等可在[仿真交易网站](https://www.quantos.org/tradesim/trade.html)查看，也可使用[vnTrade](https://github.com/quantOS-org/TradeSim/tree/master/vnTrader)客户端查看，如下图：
+
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/tradesim_web.PNG?raw=true)
+
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/vnTrader.PNG?raw=true)
+
+
 
 *__注__：以上只展示了部分核心代码段，__无法直接运行__。完整、可运行代码可在[这里](https://github.com/quantOS-org/JAQS/blob/master/example/alpha/first_example.py)下载。*
+
 
 ## 附：JAQS简介
 
