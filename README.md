@@ -18,10 +18,10 @@ quantOS致力于提供量化开源系统的一站式解决方案。
 
 ## 快速入门
 
-* [quantOS用户登录指南](prerequisites.md)
+* [quantOS上手指南](prerequisites.md)
 * [quantOS可以做什么](architect.md)
-* [quantOS量化策略样例(1)：选股](strategy_tutorial_1_alpha.md)
-* [quantOS量化策略样例(2)：择时](strategy_tutorial_2_timing.md)
+* [量化策略样例(1)：选股](strategy_tutorial_1_alpha.md)
+* [量化策略样例(2)：择时](strategy_tutorial_2_timing.md)
 * [如何进行仿真交易](tradesimguide.md)
 * [我只想使用数据，该怎么做](tusharepro.md)
 
@@ -33,6 +33,7 @@ quantOS致力于提供量化开源系统的一站式解决方案。
 * [如何进行算法交易](algorithm.md)
 * [数据处理神器DataView](https://github.com/quantOS-org/JAQS/blob/master/doc/data_view.md)
 * [quantOS数据规范](dataspecification.md)
+* [quantOS安全机制](security.md)
 
 ## 安装指南
 
