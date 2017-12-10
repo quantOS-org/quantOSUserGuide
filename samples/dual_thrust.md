@@ -97,7 +97,7 @@ def initialize(self):
     self.low_list[-1] = df.low
 ```
 
-策略的主体部分在on_quote()函数中实现。因为我们选择分钟级回测，所以会在每分钟调用on_quote()函数。
+策略的主体部分在on_bar()函数中实现。因为我们选择分钟级回测，所以会在每分钟调用on_bar()函数。
 
 首先取到当日的quote，并计算过去$N$天的HH，HC，LC和LL，并据此计算Range和上下限Upper，Lower
 ```python

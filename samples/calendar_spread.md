@@ -57,7 +57,7 @@ def init_from_config(self, props):
 ```
 
 ##### 3. 策略实现
-策略的主体部分在on_quote()函数中实现。因为我们选择每日调仓，所以会在每天调用on_quote()函数。
+策略的主体部分在on_bar()函数中实现。因为我们选择每日调仓，所以会在每天调用on_bar()函数。
 首先将两个合约的quote放入self.quote1和self.quote2中，并计算当天的spread
 ```python
 q1 = quote_dic.get(self.s1)
