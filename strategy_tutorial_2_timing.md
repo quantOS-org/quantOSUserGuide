@@ -61,10 +61,10 @@ def __init__(self):
     
     # 记录当前已经过的天数
     self.window_count = 0
-    self.window = self.slow_ma_len + 1
+    self.window = 0
 
     # 固定长度的价格序列
-    self.price_arr = np.zeros(self.window)
+    self.price_arr = None
 
     # 快线和慢线均值
     self.fast_ma = 0
@@ -93,6 +93,10 @@ def init_from_config(self, props):
     # 快线和慢线均值
     self.fast_ma_len = props.get('fast_ma_length')
     self.slow_ma_len = props.get('slow_ma_length')
+    self.window = self.slow_ma_len + 1
+
+    # 固定长度的价格序列
+    self.price_arr = np.zeros(self.window)
 
 ```
 ### 2. 逻辑实现
