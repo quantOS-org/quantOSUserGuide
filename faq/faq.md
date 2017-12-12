@@ -74,5 +74,6 @@
 	
 	股票Alpha策略回测框架`AlphaBacktestInstance`使用真实价格回测，自动对除权除息进行调整，详见[JAQS策略系统解析](https://github.com/quantOS-org/quantOSUserGuide/blob/master/jaqs.md)；事件驱动择时策略回测框架`EventBacktestInstance`在日线回测时，数据来自`data_api.daily`接口，可以自选复权方式，目前默认使用后复权，防止计算均线等指标出错，在分钟线回测时，均为真实价格。  
 	价格后复权的计算方法是从取数据的`start_date`作为复权起始日，所以不同的`start_date`会导致不同的价格序列，但不影响每日收益的正确性。
-20. 为何数据API总是返回`-1,no_connection`：
+20. 为何数据API总是返回`-1,no_connection`
+	
 	可能是使用者所处网络环境有相关限制，可使用telnet工具测试数据IP端口是否畅通
