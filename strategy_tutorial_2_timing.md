@@ -199,4 +199,4 @@ user_info, msg = tapi.login(trade_config['remote.trade.username'], trade_config[
 task_id, msg = tapi.place_order(security = '600519.SH', action = 'Buy', price = 667, size = 100)
 ```
 发单成功后,trade_api为任务编号。具体订单持仓盈亏可在[仿真交易网站](https://www.quantos.org/tradesim/trade.html)查看,如下图所示:
-![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/doubleMA_tradeapi.png?raw=true)
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/doubleMA_tradeapi.PNG?raw=true)
