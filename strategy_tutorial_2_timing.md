@@ -190,5 +190,12 @@ def analyze():
 ```
 *__注__：本文只介绍了策略核心函数和逻辑，完整代码请点击[这里](https://github.com/quantOS-org/JAQS/blob/master/example/eventdriven/DoubleMA.py)。*
 
-## 五、仿真交易结果展示
-在[仿真交易网站](https://www.quantos.org/tradesim/trade.html)，选择对应的策略，比如在本例中为沪深300。
+## 五、仿真交易及结果展示
+本例展示的是日线交易策略,可以通过TradeApi进行手动下单。需要输入的信息包括股票代码,交易方向,价格和交易量。
+```python
+from jaqs.trade.tradeapi import TradeApi
+tapi = TradeApi(trade_config['remote.trade.address'])
+user_info, msg = tapi.login(trade_config['remote.trade.username'], trade_config['remote.trade.password'])
+task_id, msg = tapi.place_order(security = '600519.SH', action = 'Buy', price = 667, size = 100)
+```
+发单成功后,trade_api为任务编号。具体订单持仓盈亏可在[仿真交易网站](https://www.quantos.org/tradesim/trade.html)查看。
