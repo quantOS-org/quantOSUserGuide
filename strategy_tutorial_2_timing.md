@@ -56,8 +56,8 @@ def __init__(self):
     self.symbol = ''
 
     # 快线和慢线周期
-    self.fast_ma_len = 5
-    self.slow_ma_len = 15
+    self.fast_ma_len = 0
+    self.slow_ma_len = 0
     
     # 记录当前已经过的天数
     self.window_count = 0
@@ -122,8 +122,8 @@ self.price_arr[-1] = mid
 ```
 接着计算快速均线和慢速均线，
 ```python
-self.fast_ma = np.mean(self.price_arr[-self.fast_ma_len - 1:])
-self.slow_ma = np.mean(self.price_arr[-self.slow_ma_len - 1:])
+self.fast_ma = np.mean(self.price_arr[-self.fast_ma_len:])
+self.slow_ma = np.mean(self.price_arr[-self.slow_ma_len:])
 ```
 第二步：当快线向上穿越慢线且当前没有持仓，则买入100股；当快线向下穿越慢线且当前有持仓，则平仓。
 ```python
