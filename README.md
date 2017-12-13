@@ -24,6 +24,7 @@ quantOS致力于提供量化开源系统的一站式解决方案。
 * [量化策略样例(2)：择时](strategy_tutorial_2_timing.md)
 * [如何进行仿真交易](tradesimguide.md)
 * [我只想使用数据，该怎么做](tusharepro.md)
+* [提问的艺术](https://github.com/quantOS-org/JAQS/blob/master/doc/how_to_ask_questions.md)
 
 ## 高级进阶
 * [quantOS典型应用场景分析](usercase.md)
