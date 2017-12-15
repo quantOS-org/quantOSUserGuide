@@ -54,3 +54,9 @@ quantOS致力于提供量化开源系统的一站式解决方案。
 ## quantOS最新发布动态
 
 * [最新发布动态](releasenotes.md)
+
+## 社区开放式开发任务
+
+* [mdlink腾讯](dev/task-mdlink-tencent.md)  (已完成)
+
+* [将tk转换成分钟线](dev/task-tick2bar.md)  (开发中)
