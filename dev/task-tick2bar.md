@@ -29,12 +29,12 @@ qms同时记录和保存了所有的tick数据，位于data/tk目录下，按照
 3. 通过python将SHF20171214.H5转换成分钟线（1m，5m，15m），存储成SHF20171214-1m.H5，SHF20171214-5m.H5，SHF20171214-15m.H5.
 
 4. 分钟线计算的几个注意事项：
-(1) 分钟线的open, high, low, close, volume, turnover指这个时间段的统计数据。
-(2) 如果某个时间段内没有任何tick，需要用前一分钟的close补齐, volume和turnover为0。
-(3) 1分钟bar的时间点标注是93100，93101，93102，。。。，113000，130100，130200，130300，。。。，150000.
-(4) 其他分钟的时间点，规则参考1分钟。
-(5) 商品期货国内有夜盘，夜盘分钟线也需要合成。
-(6) 分钟线里面的ask/bid信息，记录本时段内最后一笔tick的ask/bid信息。如果本时段没有任何tick，则全部为0.
++ (1) 分钟线的open, high, low, close, volume, turnover指这个时间段的统计数据。
++ (2) 如果某个时间段内没有任何tick，需要用前一分钟的close补齐, volume和turnover为0。
++ (3) 1分钟bar的时间点标注是93100，93101，93102，。。。，113000，130100，130200，130300，。。。，150000.
++ (4) 其他分钟的时间点，规则参考1分钟。
++ (5) 商品期货国内有夜盘，夜盘分钟线也需要合成。
++ (6) 分钟线里面的ask/bid信息，记录本时段内最后一笔tick的ask/bid信息。如果本时段没有任何tick，则全部为0.
 
 5. 转出的分钟HDF5数据，保存目录结构如下：
 ```
@@ -85,24 +85,22 @@ SHF20171214-1m
 |bidprice3    |int64     |* 10000 |
 |bidprice4    |int64     |* 10000 |
 |bidprice5    |int64     |* 10000 |
-|askvolume1   |          |        |
-|askvolume2   |          |        |
-|askvolume3   |          |        |
-|askvolume4   |          |        |
-|askvolume5   |          |        |
-|bidvolume1   |          |        |
-|bidvolume2   |          |        |
-|bidvolume3   |          |        |
-|bidvolume4   |          |        |
-|bidvolume5   |          |        |
+|askvolume1   |int64     |        |
+|askvolume2   |int64     |        |
+|askvolume3   |int64     |        |
+|askvolume4   |int64     |        |
+|askvolume5   |int64     |        |
+|bidvolume1   |int64     |        |
+|bidvolume2   |int64     |        |
+|bidvolume3   |int64     |        |
+|bidvolume4   |int64     |        |
+|bidvolume5   |int64     |        |
 
 
 ## 招募开发达人
 
 要求：
 
-(1) 有热情，支援从事开源开发
-(2) 会python，对Pandas有了解
-(3) 如果有一点关于K线的知识就更好了。
-
-
++ 有热情，支援从事开源开发
++ 会python，对Pandas有了解
++ 如果有一点关于K线的知识就更好了。
