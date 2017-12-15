@@ -50,3 +50,7 @@ quantOS致力于提供量化开源系统的一站式解决方案。
 * [格雷厄姆选股策略](samples/graham.md)
 * [商品期货的Dual Thrust日内交易策略](samples/dual_thrust.md)
 * [Calendar Spread交易策略](samples/calendar_spread.md)
+
+## quantOS最新发布动态
+
+* [最新发布动态](releasenotes.md)
