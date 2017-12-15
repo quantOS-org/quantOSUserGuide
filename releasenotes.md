@@ -5,7 +5,7 @@
 
 + DataCore
 	+ 发布对接腾讯行情的mdlink，开发者是网友乔木头和李晓松
-	+ 发布本地tk文件转换成HDF5工具
+	+ 发布本地tk文件转换成HDF5工具. [下载](https://www.quantos.org/datacore/download.html)
 
 + JAQS
 	+ 升级到0.6.7版本
