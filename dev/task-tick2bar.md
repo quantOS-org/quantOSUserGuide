@@ -16,12 +16,13 @@ qms同时记录和保存了所有的tick数据，位于data/tk目录下，按照
  2395156236 Dec 14 16:39 SZ20171214.tk
 ```
 
-目前遗留的问题是，用户无法通过DataCore获取历史分钟数据。
+目前遗留的问题是，用户无法通过DataCore获取历史分钟数据，历史tick。
 
 我们提供的解决方案是:
 
-+ 从每天存储的tick文件读取出所有的tick，然后合并成分钟线，并保存成HDF5文件格式。
-+ DataCore会发布一个模块，支持从HDF5中读取数据，提供历史分钟线给用户使用。
++ 从每天存储的tick文件读取出所有的tick，转存成HDF5. 转换工具从这里[下载](https://www.quantos.org/datacore/download.html)
++ 从tick.H5文件合并分钟线，并保存成Bar.H5文件。
++ DataCore会发布一个模块，支持从HDF5中读取数据，提供历史tick，分钟线给用户使用。
 
 ## 开发要求
 
@@ -41,9 +42,10 @@ qms同时记录和保存了所有的tick数据，位于data/tk目录下，按照
 
 5. 转出的分钟HDF5数据，保存目录结构如下：
 ```
-/data/bar/SHF/SHF20171214-1m.H5
-/data/bar/SHF/SHF20171214-5m.H5
-/data/bar/SHF/SHF20171214-15m.H5
+/data/SHF/SHF20171214-tk.H5
+/data/SHF/SHF20171214-1m.H5
+/data/SHF/SHF20171214-5m.H5
+/data/SHF/SHF20171214-15m.H5
 ```
 这里的SHF是上期所，其他还包括SH，SZ，CFE，DCE，CZC
 
