@@ -110,6 +110,7 @@ tick数据每个标的的DataFrame包含的字段及其类型包括：
 |bidvolume5   |int64     |        |
 
 根据tick数据合成bar数据，字段如下：
+
 |field          |type      |value   | 
 |-------------  |----------|--------|  
 |open           |int64     |* 10000 | 
