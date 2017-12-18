@@ -43,13 +43,15 @@ qms同时记录和保存了所有的tick数据，位于data/tk目录下，按照
 + (4) 其他分钟的时间点，规则参考1分钟。
 + (5) 商品期货国内有夜盘，夜盘分钟线也需要合成。
 + (6) 分钟线里面的ask/bid信息，记录本时段内最后一笔tick的ask/bid信息。如果本时段没有任何tick，则全部为0.
++ (7) total_turnover和total_volume，记录截止该时段结束前该标的日内成交总量和成交总额，即该时段结束前收到的最后一笔tick的turnover和volume值。
++ (8) settle和oi同total_turnover和total_volume类似，取时段结束前收到的最后一笔tick的settle和oi值
 
 5. 转出的HDF5数据，保存目录结构如下：
 ```
-/data/SHF/SHF20171214-tk.H5
-/data/SHF/SHF20171214-1m.H5
-/data/SHF/SHF20171214-5m.H5
-/data/SHF/SHF20171214-15m.H5
+/data/SHF/2017/SHF20171214-tk.H5
+/data/SHF/2017/SHF20171214-1m.H5
+/data/SHF/2017/SHF20171214-5m.H5
+/data/SHF/2017/SHF20171214-15m.H5
 ```
 这里的SHF是上期所，其他还包括SH，SZ，CFE，DCE，CZC
 
@@ -62,7 +64,7 @@ SHF20171214-1m
 	| au1802.SHF (DataFrame保存分钟线)
 ```
 
-每个标的的DataFrame包含的字段及其类型包括：
+tick数据每个标的的DataFrame包含的字段及其类型包括：
 
 |field        |type      |value   |   
 |-------------|----------|--------|   
@@ -85,7 +87,7 @@ SHF20171214-1m
 |trade_date   |int64     |        |
 |time         |int64     |        |
 |preoi        |int64     |        |
-|index     	  |datetime  |        |
+|index        |datetime  |        |
 |askprice1    |int64     |* 10000 |
 |askprice2    |int64     |* 10000 |
 |askprice3    |int64     |* 10000 |
@@ -107,6 +109,43 @@ SHF20171214-1m
 |bidvolume4   |int64     |        |
 |bidvolume5   |int64     |        |
 
+根据tick数据合成bar数据，字段如下：
+|field          |type      |value   | 
+|-------------  |----------|--------|  
+|open           |int64     |* 10000 | 
+|high           |int64     |* 10000 |
+|low            |int64     |* 10000 |
+|close          |int64     |* 10000 |
+|settle         |int64     |* 10000 |
+|oi             |int64     |        |
+|volume         |int64     |        |
+|turnover       |int64     |        |
+|total_volume   |int64     |        |
+|total_turnover |int64     |        |
+|date           |int64     |        |
+|trade_date     |int64     |        |
+|time           |int64     |        |
+|index          |datetime  |        |
+|askprice1      |int64     |* 10000 |
+|askprice2      |int64     |* 10000 |
+|askprice3      |int64     |* 10000 |
+|askprice4      |int64     |* 10000 |
+|askprice5      |int64     |* 10000 |
+|bidprice1      |int64     |* 10000 |
+|bidprice2      |int64     |* 10000 |
+|bidprice3      |int64     |* 10000 |
+|bidprice4      |int64     |* 10000 |
+|bidprice5      |int64     |* 10000 |
+|askvolume1     |int64     |        |
+|askvolume2     |int64     |        |
+|askvolume3     |int64     |        |
+|askvolume4     |int64     |        |
+|askvolume5     |int64     |        |
+|bidvolume1     |int64     |        |
+|bidvolume2     |int64     |        |
+|bidvolume3     |int64     |        |
+|bidvolume4     |int64     |        |
+|bidvolume5     |int64     |        |
 
 ## 招募开发达人
 
