@@ -54,9 +54,9 @@ qms同时记录和保存了所有的tick数据，位于data/tk目录下，按照
 6. 转出的HDF5数据，保存目录结构如下：
 ```
 /data/SHF/2017/SHF20171214-tk.H5
-/data/SHF/2017/SHF20171214-1m.H5
-/data/SHF/2017/SHF20171214-5m.H5
-/data/SHF/2017/SHF20171214-15m.H5
+/data/SHF/2017/SHF20171214-1M.H5
+/data/SHF/2017/SHF20171214-5M.H5
+/data/SHF/2017/SHF20171214-15M.H5
 ```
 这里的SHF是上期所，其他还包括SH，SZ，CFE，DCE，CZC
 
