@@ -12,7 +12,7 @@ TradeSim支持使用TradeApi进行算法交易。支持的算法包括VWAP，TWA
 ### 以VWAP为例，样例代码如下：
 
 ```py
-from tradeapi import TradeApi
+from jaqs.trade.tradeapi import TradeApi
 
 # 登录仿真系统
 tapi = TradeApi(addr="tcp://gw.quantos.org:8901") # tcp://gw.quantos.org:8901是仿真系统地址
