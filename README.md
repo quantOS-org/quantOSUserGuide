@@ -59,4 +59,4 @@ quantOS致力于提供量化开源系统的一站式解决方案。
 
 * [mdlink腾讯](dev/task-mdlink-tencent.md)  (已完成)
 
-* [将tk转换成分钟线](dev/task-tick2bar.md)  (**开发者招募中**)
+* [将tk转换成分钟线](dev/task-tick2bar.md)  (已完成)
