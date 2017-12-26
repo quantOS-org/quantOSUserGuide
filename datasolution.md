@@ -254,9 +254,7 @@ Tick数据每个标的的DataFrame包含的字段及其类型如下所示：
 
 ##### 分钟线文件数据格式
 
-1分钟线文件的文件名格式为"@MKT@YYYYMMDD-1M.h5"，@MKT表示市场名，@YYYYMMDD表示交易日。
-5分钟线文件的文件名格式为"@MKT@YYYYMMDD-5M.h5"，@MKT表示市场名，@YYYYMMDD表示交易日。
-15分钟线文件的文件名格式为"@MKT@YYYYMMDD-15M.h5"，@MKT表示市场名，@YYYYMMDD表示交易日。
+1分钟线文件的文件名格式为"@MKT@YYYYMMDD-1M.h5"，5分钟线文件的文件名格式为"@MKT@YYYYMMDD-5M.h5"，15分钟线文件的文件名格式为"@MKT@YYYYMMDD-15M.h5"，@MKT表示市场名，@YYYYMMDD表示交易日。
 
 分钟线数据每个标的的DataFrame包含的字段及其类型如下所示：
 
