@@ -41,5 +41,6 @@ df, msg = api.daily(
 |5.18|  600832| 5.20|   5.12|   NaN |5.12   |NaN    |600832.SH| 20121101    |交易 |1.972100e+07|  3814712 | 5.17|
 
 详细接口API，请参看：
-1. [http://tushare.org/pro/usage.html](http://tushare.org/pro/usage.html)
-2. [https://github.com/quantOS-org/JAQS/blob/master/doc/data_api.md](https://github.com/quantOS-org/JAQS/blob/master/doc/data_api.md)
+1. [https://github.com/quantOS-org/DataCore/blob/master/doc/api_ref.md](https://github.com/quantOS-org/DataCore/blob/master/doc/api_ref.md)
+2. [http://tushare.org/pro/usage.html](http://tushare.org/pro/usage.html)
+
