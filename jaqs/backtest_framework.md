@@ -1,8 +1,8 @@
-# JAQS回测模块介绍
+# JAQS回测框架介绍
 
-JAQS有`jaqs.data`, `jaqs.research`, `jaqs.trade`, `jaqs.util`几个模块，其中回测、仿真、实盘交易都在交易模块`jaqs.trade`中实现，本文主要介绍JAQS完成回测所需的各个子模块。
+JAQS有`jaqs.data`, `jaqs.research`, `jaqs.trade`, `jaqs.util`几个模块，其中回测、仿真、实盘交易都在交易模块`jaqs.trade`中实现，本文主要介绍JAQS完成**回测**所需的各个子模块。
 
-## 需要哪些模块
+## 回测所需模块分析
 
 我们把回测拆分为回测实例、策略、仓位管理、交易系统这4个子模块，下面来解释为什么：
 
@@ -18,7 +18,7 @@ JAQS有`jaqs.data`, `jaqs.research`, `jaqs.trade`, `jaqs.util`几个模块，其
 
 最后，为了满足模块间的相互访问及存储全局变量的需要，
 
-作一总结，完成回测总共需要以下模块：
+作一**总结**，完成回测总共需要以下模块：
 
 - 回测实例`BackestInstance`
 - 策略`Strategy`
@@ -26,6 +26,36 @@ JAQS有`jaqs.data`, `jaqs.research`, `jaqs.trade`, `jaqs.util`几个模块，其
 - 交易API `TradeApi`
 - 模拟撮合器`Simulator`
 - 运行上下文`Context`
+
+## 回测示例代码
+
+下面这段代码来自[双均线策略示例](https://github.com/quantOS-org/JAQS/blob/master/example/eventdriven/DoubleMA.py)。
+
+```python
+tapi = BacktestTradeApi()                           # 交易API
+ins = EventBacktestInstance()                       # 回测实例
+ds = RemoteDataService()                            # 数据API
+strat = DoubleMaStrategy()                          # 策略示例
+pm = PortfolioManager()                             # 持仓管理
+
+# 运行上下文，包含数据API，交易API，策略，持仓管理，回测实例
+context = model.Context(data_api=ds, trade_api=tapi, 
+                        strategy=strat, pm=pm
+                        instance=ins)
+
+# 策略配置参数字典（为简化代码，未展示所有参数）
+props = {
+         "symbol"       : '600519.SH',
+         "start_date"   : 20170101,
+         "end_date"     : 20171104,
+         "init_balance" : 50000
+        }
+ins.init_from_config(props)                         # 从配置字典中初始化回测实例
+
+ins.run()                                           # 调用回测实例的run方法，运行回测
+
+ins.save_results(folder_path=result_dir_path)       # 调用回测示例的save_results方法，存储回测结果
+```
 
 
 
