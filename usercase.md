@@ -22,7 +22,7 @@
 
 ![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/solution_case1.png?raw=true)
 
-1. 使用在线数据源\(data.tushare.org\)，作为自己的数据源，数据质量及时可靠，使用DataApi进行访问，简单易用。
+1. 使用在线数据源\(data.quantos.org\)，作为自己的数据源，数据质量及时可靠，使用DataApi进行访问，简单易用。
 2. 使用JAQS平台进行策略研究。JAQS集成了信号研究、策略回测、回测分析等功能模块，同时支持Alpha、CTA、套利等，可以快速开发策略，进行回测。
 3. 使用TradeSim进行仿真交易，TradeSim支持股票、期货等品种的交易，根据实时行情进行模拟撮合，最大程度接近实盘效果，提供绩效分析功能，方便用户跟踪策略在模拟盘中的绩效，做到心中有数。
 4. 使用vn.py进行实盘交易，vn.py已经实现了与国内各大主流交易系统的对接，可满足个人用户的单帐户交易要求。JAQS和vn.py之间通过TradeApi进行标准化对接，可做到仿真与实盘交易无缝对接。
@@ -113,7 +113,7 @@ TKPro是一款适合中大型交易机构的企业级交易系统，可以本地
 
 ![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/solution_case4.png?raw=true)
 
-1. 使用在线数据源\(data.tushare.org\)，作为自己的数据源，数据质量及时可靠，使用DataApi进行访问，简单易用。
+1. 使用在线数据源\(data.quantos.org\)，作为自己的数据源，数据质量及时可靠，使用DataApi进行访问，简单易用。
 2. 使用JAQS平台进行数据分析系统。JAQS提供的DataView组件，可方便快捷的取到用户需要的数据，支持通过公式定义衍生数据，支持本地化存储。
 3. 用户获得数据后，根据自己的业务生成报表和分析结果。
 

@@ -34,7 +34,7 @@
 ```py
 from data_api import DataApi
 
-api = DataApi(addr="tcp://data.tushare.org:8910") # 在线数据源
+api = DataApi(addr="tcp://data.quantos.org:8910") # 在线数据源
 
 api.login("手机号", "token")  #认证模块，需要修改成www.quantos.org的注册用户
 
@@ -68,8 +68,6 @@ df, msg = api.query(
 ```
 
 **在线数据服务有一个限制，不提供行情订阅推送功能，只能查询。**
-
-最全的功能文档，请参考：[http://tushare.org/pro/index.html](http://tushare.org/pro/index.html)
 
 对于一般普通用户，如果上述数据能满足你的要求，我们推荐你使用这种方案。
 

@@ -18,7 +18,7 @@
 
 from jaqs.data import DataApi
 
-api = DataApi(addr="tcp://data.tushare.org:8910")
+api = DataApi(addr="tcp://data.quantos.org:8910")
 
 api.login("手机号", "token") 
 
@@ -39,8 +39,4 @@ df, msg = api.daily(
 |5.11|  600832| 5.18|   5.08|   NaN |5.12   |NaN    |600832.SH| 20121030    |交易 |1.622705e+07|  3170615 | 5.12|
 |5.11|  600832| 5.14|   5.09|   NaN |5.12   |NaN    |600832.SH| 20121031    |交易 |1.072007e+07|  2097770 | 5.11|
 |5.18|  600832| 5.20|   5.12|   NaN |5.12   |NaN    |600832.SH| 20121101    |交易 |1.972100e+07|  3814712 | 5.17|
-
-详细接口API，请参看：
-1. [https://github.com/quantOS-org/DataCore/blob/master/doc/api_ref.md](https://github.com/quantOS-org/DataCore/blob/master/doc/api_ref.md)
-2. [http://tushare.org/pro/usage.html](http://tushare.org/pro/usage.html)
 

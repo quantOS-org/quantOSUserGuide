@@ -15,10 +15,10 @@
 ### 用户可使用令牌(Token)登录访问在线数据系统
 ```python
 from jaqs.data import DataApi
-dapi = DataApi(addr="tcp://data.tushare.org:8910")
+dapi = DataApi(addr="tcp://data.quantos.org:8910")
 login_result, err_msg = api.login("手机号", "token")  # 这里token即为令牌，不要使用用户密码
 ```
-更多关于`DataApi`的教程，参见[DataApi使用说明](http://tushare.org/pro/usage.html)。
+更多关于`DataApi`的教程，参见DataApi使用说明。
 
 ### 用户可使用令牌登录访问仿真交易系统
 ```python
