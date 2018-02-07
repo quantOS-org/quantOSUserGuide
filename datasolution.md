@@ -135,7 +135,7 @@ DataCore本地行情系统的逻辑架构如下：
 | subscribe | 订阅分钟线 |
 
 ```py
-from data_api import DataApi
+from data_api import DataApi # data_api为存放DataApi的文件夹名
 
 api = DataApi(addr="tcp://127.0.0.1:8910") # 根据本地实际情况修改
 
@@ -168,7 +168,202 @@ subs_list,msg = api.subscribe(symbol=symbol, func=on_quote,fields=fields)
 
 ### 二、构建本地历史市场数据系统
 
-comming soon......
+DataCore 1.2 版本开始支持本地历史市场数据查询，包括历史Tick查询和历史分钟线查询。mdlink/qms可以保存收到的Tick数据，利用这些数据可以增量构建本地历史市场数据。如果需要存量历史市场数据，则需要自己准备相应数据，并转为指定格式的h5文件。DataCore的本地历史市场数据架构如下所示：
+![](https://github.com/PKUJohnson/LearnJaqsByExample/blob/master/image/case5-5.png)
+
+#### 数据文件准备
+
+一种类型的数据每个市场每个交易日各存为一个h5文件，目前支持tk(Tick)、1M(1分钟线)、5M(5分钟线)、15M(15分钟线)四种类型数据，例如SHF市场20171225交易日的数据可存为如下文件：
+
+```
+/data/SHF/2017/SHF20171214-tk.H5
+/data/SHF/2017/SHF20171214-1M.H5
+/data/SHF/2017/SHF20171214-5M.H5
+/data/SHF/2017/SHF20171214-15M.H5
+```
+
+使用pandas的HDFStore进行h5文件存储，h5文件的数据存储格式为：每个标的存为一个group，该group中存放DataFrame格式的数据。例如：
+```
+SHF20171214-1m
+	| cu1801.SHF (DataFrame格式1分钟线)
+	| cu1802.SHF (DataFrame格式1分钟线)
+	| au1801.SHF (DataFrame格式1分钟线)
+	| au1802.SHF (DataFrame格式1分钟线)
+```
+
+HDFStore使用方法如下所示：
+```python
+import pandas as pd
+# 获取数据代码省略
+store = pd.HDFStore(filename, "a")
+store['600030.SH'] = df1
+store['000001.SH'] = df2
+store.close()
+```
+
+##### Tick文件数据格式
+
+Tick文件的文件名格式为"@MKT@YYYYMMDD-tk.h5",其中@MKT表示市场名，@YYYYMMDD表示交易日。
+
+Tick数据每个标的的DataFrame包含的字段及其类型如下所示：
+
+|field        |type      |value   |   
+|-------------|----------|--------|   
+|last         |int64     |* 10000 |
+|vwap         |int64     |* 10000 |
+|open         |int64     |* 10000 |
+|high         |int64     |* 10000 |
+|low          |int64     |* 10000 |
+|close        |int64     |* 10000 |
+|settle       |int64     |* 10000 |
+|iopv         |int64     |* 10000 |
+|limit_up     |int64     |* 10000 |
+|limit_down   |int64     |* 10000 |
+|preclose     |int64     |* 10000 |
+|presettle    |int64     |* 10000 |
+|oi           |int64     |        |
+|volume       |int64     |        |
+|turnover     |int64     |        |
+|date         |int64     |        |
+|trade_date   |int64     |        |
+|time         |int64     |        |
+|preoi        |int64     |        |
+|index        |datetime  |        |
+|askprice1    |int64     |* 10000 |
+|askprice2    |int64     |* 10000 |
+|askprice3    |int64     |* 10000 |
+|askprice4    |int64     |* 10000 |
+|askprice5    |int64     |* 10000 |
+|bidprice1    |int64     |* 10000 |
+|bidprice2    |int64     |* 10000 |
+|bidprice3    |int64     |* 10000 |
+|bidprice4    |int64     |* 10000 |
+|bidprice5    |int64     |* 10000 |
+|askvolume1   |int64     |        |
+|askvolume2   |int64     |        |
+|askvolume3   |int64     |        |
+|askvolume4   |int64     |        |
+|askvolume5   |int64     |        |
+|bidvolume1   |int64     |        |
+|bidvolume2   |int64     |        |
+|bidvolume3   |int64     |        |
+|bidvolume4   |int64     |        |
+|bidvolume5   |int64     |        |
+
+其中value栏"*10000"表示需要将原值乘10000以后存转为int64类型，简单来讲，所有价格相关的字段都需要乘10000然后转int64。
+
+##### 分钟线文件数据格式
+
+1分钟线文件的文件名格式为"@MKT@YYYYMMDD-1M.h5"，5分钟线文件的文件名格式为"@MKT@YYYYMMDD-5M.h5"，15分钟线文件的文件名格式为"@MKT@YYYYMMDD-15M.h5"，@MKT表示市场名，@YYYYMMDD表示交易日。
+
+分钟线数据每个标的的DataFrame包含的字段及其类型如下所示：
+
+|field          |type      |value   | 
+|---------------|----------|--------|
+|open           |int64     |* 10000 |
+|high           |int64     |* 10000 |
+|low            |int64     |* 10000 |
+|close          |int64     |* 10000 |
+|settle         |int64     |* 10000 |
+|oi             |int64     |        |
+|volume         |int64     |        |
+|turnover       |int64     |        |
+|total_volume   |int64     |        |
+|total_turnover |int64     |        |
+|date           |int64     |        |
+|trade_date     |int64     |        |
+|time           |int64     |        |
+|index          |datetime  |        |
+|askprice1      |int64     |* 10000 |
+|askprice2      |int64     |* 10000 |
+|askprice3      |int64     |* 10000 |
+|askprice4      |int64     |* 10000 |
+|askprice5      |int64     |* 10000 |
+|bidprice1      |int64     |* 10000 |
+|bidprice2      |int64     |* 10000 |
+|bidprice3      |int64     |* 10000 |
+|bidprice4      |int64     |* 10000 |
+|bidprice5      |int64     |* 10000 |
+|askvolume1     |int64     |        |
+|askvolume2     |int64     |        |
+|askvolume3     |int64     |        |
+|askvolume4     |int64     |        |
+|askvolume5     |int64     |        |
+|bidvolume1     |int64     |        |
+|bidvolume2     |int64     |        |
+|bidvolume3     |int64     |        |
+|bidvolume4     |int64     |        |
+|bidvolume5     |int64     |        |
+
+##### 利用QMS保存的tk文件生成数据文件
+
+目前运行mdlink和qms系统后，会在data/tk文件夹下按市场保存收到的tick数据，如下所示：
+```
+  617134798 Dec 14 15:20 SHF20171214.tk
+   62738353 Dec 14 16:34 CFE20171214.tk
+  391967678 Dec 14 15:00 CZC20171214.tk
+  424926986 Dec 14 15:03 DCE20171214.tk
+ 1608054336 Dec 14 16:39 SH20171214.tk
+ 2395156236 Dec 14 16:39 SZ20171214.tk
+```
+
+我们提供了python版的tkreader工具来读取这些二进制tk文件，并将其转换为h5格式的Tick文件和分钟线文件。
+
+使用tkreader读取示例如下：
+```python
+from tkreader import TkReader
+user   = "phone number"
+passwd = "your token"
+tkreader = TkReader() 
+file_name = "SHF20171218.tk"
+start_time = "21:00:00"
+end_time   = "15:00:00"
+
+if( not tkreader.login(user, passwd)):
+    print("login failed")
+    return False
+
+if (not tkreader.open(file_name,"", start_time, end_time)):
+    print("can't open file %s " %file_name)
+    return False
+tk = tkreader.get_next()
+while tk is not None:
+    print(tk['symbol'])
+    print(tk['date'])
+    print(tk['time'])
+    print(tk['last'])
+```
+读出的Tick数据字段参考DataApi使用文档的quote字段。
+
+将tk文件转为h5格式Tick数据可以使用tkreader.py文件中的tk_to_h5函数来完成，使用示例在tkreader.py文件的main函数下。
+
+
+将tk文件转为h5格式分钟线数据可以使用tk2bar.py中的tk2bar类来完成，使用示例在tk2bar.py的main函数下。
+
+#### DataServer配置数据文件路径
+修改etc/dataserver-dev.conf文件下的his_bar项，如下所示：
+```
+"his_bar" : {
+    "bar1m_path"  : "D:/store/data/raw_data/BarONE/@MKT/@YYYY/@MKT@YYYYMMDD-1M.h5",
+    "bar5m_path"  : "D:/store/data/raw_data/BarFIVE/@MKT/@YYYY/@MKT@YYYYMMDD-5M.h5",
+    "bar15m_path" : "D:/store/data/raw_data/BarQUARTER/@MKT/@YYYY/@MKT@YYYYMMDD-15M.h5",
+    "tick_path"   : "D:/store/data/raw_data/Tick/@MKT/@YYYY/@MKT@YYYYMMDD-tk.h5"
+}
+```
+将数据文件的存放路径配置到his_bar里面：1分钟线数据文件路径配置到bar1m_path，
+5分钟线数据文件路径配置到bar5m_path，15分钟线数据文件路径配置到bar15m_path，Tick数据文件路径配置到tick_path。
+
+注意：@MKT、@YYYY和@YYYYMMDD为程序可识别的通配符，@MKT表示市场名，@YYYY表示年份，@YYYYMMDD表示日期。文件名中的通配符必须保留，文件名格式固定为@MKT@YYYYMMDD-XX.h5，不可修改。文件路径中的通配符可去掉，如：
+```
+"his_bar" : {
+    "bar1m_path"  : "D:/store/data/raw_data/@MKT@YYYYMMDD-1M.h5",
+    "bar5m_path"  : "D:/store/data/raw_data/@MKT@YYYYMMDD-5M.h5",
+    "bar15m_path" : "D:/store/data/raw_data/@MKT@YYYYMMDD-15M.h5",
+    "tick_path"   : "D:/store/data/raw_data/@MKT@YYYYMMDD-tk.h5"
+}
+```
+配置好后本地运行DataServer，使用DataApi连接本地DataServer就可以获取分钟线数据和Tick数据了。
+
 
 ### 三、构建本地参考数据系统
 
