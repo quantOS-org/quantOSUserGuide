@@ -29,3 +29,13 @@
 
 + [如何进行仿真交易](https://github.com/quantOS-org/quantOSUserGuide/blob/master/tradesimguide.md)
 
+## 加入我们的社区
+
+1. 扫描关注quantos微信公众号
+
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/quantos.jpg?raw=true)
+
+2. 扫描加入quantos官方qq群
+
+![](https://github.com/quantOS-org/quantOSUserGuide/blob/master/assets/quantos-qq.jpg?raw=true)
+
