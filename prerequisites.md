@@ -12,7 +12,7 @@
 
 ## 下载安装软件
 
-一般普通用户，可直接下载quantos[金融终端](https://www.quantos.org/terminal/index.html)。
+一般普通用户，可直接下载quantos[金融终端](https://www.quantos.org/terminal.html)。
 
 如果您有一定的python基础，也可以手动下载并安装quantOS策略研究系统[JAQS](https://github.com/quantOS-org/JAQS/blob/master/doc/install.md)
 
